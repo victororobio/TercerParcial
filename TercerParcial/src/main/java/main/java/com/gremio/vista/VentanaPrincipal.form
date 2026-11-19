@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Formulario JFrame de NetBeans: ventana principal con 5 pestañas (GroupLayout). -->
+<Form version="1.9" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3" />
+    <Property name="title" type="java.lang.String" value="Gremio de aventureros" />
+  <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="2a" green="1a" blue="0f" type="rgb" /></Property><Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="f0" green="c0" blue="60" type="rgb" /></Property></Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1" />
+    <SyntheticProperty name="generateCenter" type="boolean" value="true" />
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0" />
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false" />
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true" />
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false" />
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false" />
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1" />
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0" />
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false" />
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2" />
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="jTabbedPane1" alignment="0" max="32767" attributes="0" />
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="jTabbedPane1" alignment="0" max="32767" attributes="0" />
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JTabbedPane" name="jTabbedPane1">
+      <Properties><Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="1a" green="0f" blue="08" type="rgb" /></Property><Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="f0" green="c0" blue="60" type="rgb" /></Property><Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor"><Font name="Serif" style="1" size="13" /></Property></Properties><Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" />
+      <SubComponents>
+
+        <Container class="javax.swing.JPanel" name="panelInicio">
+          <Properties><Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="2a" green="1a" blue="0f" type="rgb" /></Property></Properties><Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Inicio">
+                <Property name="tabTitle" type="java.lang.String" value="Inicio" />
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="lblTitulo" alignment="0" max="32767" attributes="0" />
+                  <Component id="lblSubtitulo" alignment="0" max="32767" attributes="0" />
+                  <Component id="jScrollPane1" alignment="0" pref="640" max="32767" attributes="0" />
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="250" max="-2" attributes="0" />
+                      <Component id="btnComenzar" min="-2" pref="160" max="-2" attributes="0" />
+                      <EmptySpace pref="250" max="32767" attributes="0" />
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="40" max="-2" attributes="0" />
+                      <Component id="lblTitulo" min="-2" max="-2" attributes="0" />
+                      <EmptySpace min="-2" pref="6" max="-2" attributes="0" />
+                      <Component id="lblSubtitulo" min="-2" max="-2" attributes="0" />
+                      <EmptySpace min="-2" pref="30" max="-2" attributes="0" />
+                      <Component id="jScrollPane1" min="-2" pref="220" max="32767" attributes="0" />
+                      <EmptySpace min="-2" pref="28" max="-2" attributes="0" />
+                      <Component id="btnComenzar" min="-2" pref="42" max="-2" attributes="0" />
+                      <EmptySpace min="-2" pref="40" max="-2" attributes="0" />
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="lblTitulo">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Gremio de aventureros" />
+                <Property name="horizontalAlignment" type="int" value="0" />
+              <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="f0" green="c0" blue="60" type="rgb" /></Property><Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor"><Font name="Serif" style="1" size="28" /></Property><Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor"><Image iconType="3" name="/com/gremio/recursos/icono_crest_32.png" /></Property></Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblSubtitulo">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Calabozos y Dragones" />
+                <Property name="horizontalAlignment" type="int" value="0" />
+              <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="c4" green="a8" blue="78" type="rgb" /></Property><Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor"><Font name="Serif" style="2" size="16" /></Property></Properties>
+            </Component>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout" />
+              <SubComponents>
+                <Component class="javax.swing.JTextArea" name="txtInicio">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false" />
+                    <Property name="columns" type="int" value="20" />
+                    <Property name="lineWrap" type="boolean" value="true" />
+                    <Property name="rows" type="int" value="8" />
+                    <Property name="text" type="java.lang.String" value="Bienvenido, maestro del gremio." />
+                    <Property name="wrapStyleWord" type="boolean" value="true" />
+                  <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="0f" green="08" blue="05" type="rgb" /></Property><Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="e8" green="d5" blue="a8" type="rgb" /></Property><Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor"><Font name="Serif" style="0" size="14" /></Property></Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout$JScrollPaneConstraintsDescription" />
+                  </Constraints>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Component class="javax.swing.JButton" name="btnComenzar">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Comenzar" />
+              <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="d4" green="a8" blue="4a" type="rgb" /></Property><Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="1a" green="0f" blue="08" type="rgb" /></Property><Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor"><Font name="Serif" style="1" size="16" /></Property><Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor"><Image iconType="3" name="/com/gremio/recursos/icono_rocket_20.png" /></Property></Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnComenzarActionPerformed" />
+              </Events>
+            </Component>
+          </SubComponents>
+        </Container>
+
+        <Container class="javax.swing.JPanel" name="panelCrear">
+          <Properties><Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="2a" green="1a" blue="0f" type="rgb" /></Property></Properties><Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Crear">
+                <Property name="tabTitle" type="java.lang.String" value="Crear" />
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="40" max="-2" attributes="0" />
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="lblTituloCrear" alignment="0" min="-2" max="-2" attributes="0" />
+                          <Component id="lblClase" alignment="0" min="-2" max="-2" attributes="0" />
+                          <Component id="cmbClase" alignment="0" min="-2" pref="240" max="-2" attributes="0" />
+                          <Component id="lblDadoClase" alignment="0" min="-2" max="-2" attributes="0" />
+                          <Component id="lblNombre" alignment="0" min="-2" max="-2" attributes="0" />
+                          <Component id="txtNombre" alignment="0" min="-2" pref="300" max="-2" attributes="0" />
+                          <Component id="lblNivel" alignment="0" min="-2" max="-2" attributes="0" />
+                          <Component id="spNivel" alignment="0" min="-2" max="-2" attributes="0" />
+                          <Component id="lblPv" alignment="0" min="-2" max="-2" attributes="0" />
+                          <Component id="cmbPv" alignment="0" min="-2" max="-2" attributes="0" />
+                          <Component id="lblAtributo" alignment="0" min="-2" max="-2" attributes="0" />
+                          <Component id="cmbAtributo" alignment="0" min="-2" pref="300" max="-2" attributes="0" />
+                          <Component id="btnCrear" alignment="0" min="-2" pref="240" max="-2" attributes="0" />
+                      </Group>
+                      <EmptySpace pref="300" max="32767" attributes="0" />
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="24" max="-2" attributes="0" />
+                      <Component id="lblTituloCrear" min="-2" max="-2" attributes="0" />
+                      <EmptySpace min="-2" pref="24" max="-2" attributes="0" />
+                      <Component id="lblClase" min="-2" max="-2" attributes="0" />
+                      <EmptySpace min="-2" pref="4" max="-2" attributes="0" />
+                      <Component id="cmbClase" min="-2" max="-2" attributes="0" />
+                      <EmptySpace min="-2" pref="4" max="-2" attributes="0" />
+                      <Component id="lblDadoClase" min="-2" max="-2" attributes="0" />
+                      <EmptySpace min="-2" pref="18" max="-2" attributes="0" />
+                      <Component id="lblNombre" min="-2" max="-2" attributes="0" />
+                      <EmptySpace min="-2" pref="4" max="-2" attributes="0" />
+                      <Component id="txtNombre" min="-2" max="-2" attributes="0" />
+                      <EmptySpace min="-2" pref="14" max="-2" attributes="0" />
+                      <Component id="lblNivel" min="-2" max="-2" attributes="0" />
+                      <EmptySpace min="-2" pref="4" max="-2" attributes="0" />
+                      <Component id="spNivel" min="-2" max="-2" attributes="0" />
+                      <EmptySpace min="-2" pref="14" max="-2" attributes="0" />
+                      <Component id="lblPv" min="-2" max="-2" attributes="0" />
+                      <EmptySpace min="-2" pref="4" max="-2" attributes="0" />
+                      <Component id="cmbPv" min="-2" max="-2" attributes="0" />
+                      <EmptySpace min="-2" pref="14" max="-2" attributes="0" />
+                      <Component id="lblAtributo" min="-2" max="-2" attributes="0" />
+                      <EmptySpace min="-2" pref="4" max="-2" attributes="0" />
+                      <Component id="cmbAtributo" min="-2" max="-2" attributes="0" />
+                      <EmptySpace min="-2" pref="24" max="-2" attributes="0" />
+                      <Component id="btnCrear" min="-2" pref="40" max="-2" attributes="0" />
+                      <EmptySpace pref="30" max="32767" attributes="0" />
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="lblTituloCrear">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Crear Aventurero — elige clase y completa los datos" />
+              <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="f0" green="c0" blue="60" type="rgb" /></Property><Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor"><Font name="Serif" style="1" size="16" /></Property><Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor"><Image iconType="3" name="/com/gremio/recursos/icono_wizard_22.png" /></Property></Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblClase">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Clase:" />
+              <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="d4" green="a8" blue="4a" type="rgb" /></Property><Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor"><Image iconType="3" name="/com/gremio/recursos/icono_wizard_18.png" /></Property></Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="cmbClase">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="8">
+                    <StringItem index="0" value="Guerrero" />
+                    <StringItem index="1" value="Mago" />
+                    <StringItem index="2" value="Clérigo" />
+                    <StringItem index="3" value="Monje" />
+                    <StringItem index="4" value="Paladín" />
+                    <StringItem index="5" value="Explorador" />
+                    <StringItem index="6" value="Pícaro" />
+                    <StringItem index="7" value="Bardo" />
+                  </StringArray>
+                </Property>
+              <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="22" green="14" blue="09" type="rgb" /></Property><Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="f0" green="c0" blue="60" type="rgb" /></Property></Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmbClaseActionPerformed" />
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblDadoClase">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Daño d6 (dado de 6 caras) · Stat FUE (Fuerza)" />
+              <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="c4" green="a8" blue="78" type="rgb" /></Property><Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor"><Font name="Serif" style="2" size="12" /></Property><Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor"><Image iconType="3" name="/com/gremio/recursos/icono_dado_18.png" /></Property></Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblNombre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Nombre:" />
+              <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="d4" green="a8" blue="4a" type="rgb" /></Property><Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor"><Image iconType="3" name="/com/gremio/recursos/icono_user_18.png" /></Property></Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtNombre">
+              <Properties>
+                <Property name="columns" type="int" value="20" />
+              <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="22" green="14" blue="09" type="rgb" /></Property><Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="e8" green="d5" blue="a8" type="rgb" /></Property></Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblNivel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Nivel (1-20):" />
+              <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="d4" green="a8" blue="4a" type="rgb" /></Property><Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor"><Image iconType="3" name="/com/gremio/recursos/icono_star_18.png" /></Property></Properties>
+            </Component>
+            <Component class="javax.swing.JSpinner" name="spNivel">
+              <Properties>
+                <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+                  <SpinnerModel type="number" numberType="java.lang.Integer" initial="1" minimum="1" maximum="20" stepSize="1" />
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblPv">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Puntos de Vida:" />
+              <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="d4" green="a8" blue="4a" type="rgb" /></Property><Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor"><Image iconType="3" name="/com/gremio/recursos/icono_heart_18.png" /></Property></Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="cmbPv">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="10">
+                    <StringItem index="0" value="10" />
+                    <StringItem index="1" value="20" />
+                    <StringItem index="2" value="30" />
+                    <StringItem index="3" value="40" />
+                    <StringItem index="4" value="50" />
+                    <StringItem index="5" value="60" />
+                    <StringItem index="6" value="70" />
+                    <StringItem index="7" value="80" />
+                    <StringItem index="8" value="90" />
+                    <StringItem index="9" value="100" />
+                  </StringArray>
+                </Property>
+              <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="22" green="14" blue="09" type="rgb" /></Property><Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="e8" green="d5" blue="a8" type="rgb" /></Property></Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblAtributo">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Armadura Pesada (sí / no)" />
+              <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="d4" green="a8" blue="4a" type="rgb" /></Property><Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor"><Image iconType="3" name="/com/gremio/recursos/icono_gift_18.png" /></Property></Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="cmbAtributo">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="2">
+                    <StringItem index="0" value="Sí" />
+                    <StringItem index="1" value="No" />
+                  </StringArray>
+                </Property>
+              <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="22" green="14" blue="09" type="rgb" /></Property><Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="e8" green="d5" blue="a8" type="rgb" /></Property></Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="btnCrear">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Crear Aventurero" />
+              <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="d4" green="a8" blue="4a" type="rgb" /></Property><Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="1a" green="0f" blue="08" type="rgb" /></Property><Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor"><Font name="Serif" style="1" size="16" /></Property><Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor"><Image iconType="3" name="/com/gremio/recursos/icono_wizard_20.png" /></Property></Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCrearActionPerformed" />
+              </Events>
+            </Component>
+          </SubComponents>
+        </Container>
+
+        <Container class="javax.swing.JPanel" name="panelGremio">
+          <Properties><Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="2a" green="1a" blue="0f" type="rgb" /></Property></Properties><Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Gremio">
+                <Property name="tabTitle" type="java.lang.String" value="Gremio" />
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jScrollPane2" alignment="0" pref="640" max="32767" attributes="0" />
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="20" max="-2" attributes="0" />
+                      <Component id="lblContador" min="-2" max="-2" attributes="0" />
+                      <EmptySpace min="-2" pref="360" max="32767" attributes="0" />
+                      <Component id="btnIrCrear" min="-2" max="-2" attributes="0" />
+                      <EmptySpace min="-2" pref="20" max="-2" attributes="0" />
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="16" max="-2" attributes="0" />
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblContador" alignment="3" min="-2" max="-2" attributes="0" />
+                          <Component id="btnIrCrear" alignment="3" min="-2" max="-2" attributes="0" />
+                      </Group>
+                      <EmptySpace min="-2" pref="16" max="-2" attributes="0" />
+                      <Component id="jScrollPane2" min="-2" pref="400" max="32767" attributes="0" />
+                      <EmptySpace min="-2" pref="16" max="-2" attributes="0" />
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="lblContador">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0 aventureros" />
+              <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="f0" green="c0" blue="60" type="rgb" /></Property><Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor"><Font name="Serif" style="1" size="16" /></Property><Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor"><Image iconType="3" name="/com/gremio/recursos/icono_people_18.png" /></Property></Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="btnIrCrear">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Crear otro" />
+              <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="22" green="14" blue="09" type="rgb" /></Property><Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="f0" green="c0" blue="60" type="rgb" /></Property><Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor"><Image iconType="3" name="/com/gremio/recursos/icono_plus_18.png" /></Property></Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnIrCrearActionPerformed" />
+              </Events>
+            </Component>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout" />
+              <SubComponents>
+                <Container class="javax.swing.JPanel" name="panelTarjetas">
+                  <Properties><Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="2a" green="1a" blue="0f" type="rgb" /></Property></Properties><Layout class="org.netbeans.modules.form.compat2.layouts.DesignBoxLayout">
+                    <Property name="axis" type="int" value="3" />
+                  </Layout>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout$JScrollPaneConstraintsDescription" />
+                  </Constraints>
+                </Container>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
+
+        <Container class="javax.swing.JPanel" name="panelCombate">
+          <Properties><Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="2a" green="1a" blue="0f" type="rgb" /></Property></Properties><Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Combate">
+                <Property name="tabTitle" type="java.lang.String" value="Combate" />
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="20" max="-2" attributes="0" />
+                      <Component id="lblTituloCombate" min="-2" max="-2" attributes="0" />
+                      <EmptySpace pref="200" max="32767" attributes="0" />
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="20" max="-2" attributes="0" />
+                      <Component id="btnGoblin" min="-2" pref="180" max="-2" attributes="0" />
+                      <EmptySpace min="-2" pref="12" max="-2" attributes="0" />
+                      <Component id="btnOgro" min="-2" pref="180" max="-2" attributes="0" />
+                      <EmptySpace min="-2" pref="12" max="-2" attributes="0" />
+                      <Component id="btnDragon" min="-2" pref="180" max="-2" attributes="0" />
+                      <EmptySpace pref="28" max="32767" attributes="0" />
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="20" max="-2" attributes="0" />
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="lblMonsterHp" alignment="0" pref="580" max="32767" attributes="0" />
+                          <Component id="pbMonster" alignment="0" pref="580" max="32767" attributes="0" />
+                          <Component id="lblEstado" alignment="0" pref="580" max="32767" attributes="0" />
+                      </Group>
+                      <EmptySpace min="-2" pref="20" max="-2" attributes="0" />
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="60" max="-2" attributes="0" />
+                      <Component id="btnD4" min="-2" max="-2" attributes="0" />
+                      <EmptySpace min="-2" pref="40" max="-2" attributes="0" />
+                      <Component id="btnD6" min="-2" max="-2" attributes="0" />
+                      <EmptySpace min="-2" pref="40" max="-2" attributes="0" />
+                      <Component id="lblUltimaTirada" min="-2" max="-2" attributes="0" />
+                      <EmptySpace pref="60" max="32767" attributes="0" />
+                  </Group>
+                  <Component id="jScrollPane3" alignment="0" pref="640" max="32767" attributes="0" />
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="20" max="-2" attributes="0" />
+                      <Component id="btnIniciar" min="-2" pref="190" max="-2" attributes="0" />
+                      <EmptySpace min="-2" pref="12" max="-2" attributes="0" />
+                      <Component id="btnCancelar" min="-2" pref="130" max="-2" attributes="0" />
+                      <EmptySpace pref="268" max="32767" attributes="0" />
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="16" max="-2" attributes="0" />
+                      <Component id="lblTituloCombate" min="-2" max="-2" attributes="0" />
+                      <EmptySpace min="-2" pref="16" max="-2" attributes="0" />
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="btnGoblin" alignment="3" min="-2" pref="70" max="-2" attributes="0" />
+                          <Component id="btnOgro" alignment="3" min="-2" pref="70" max="-2" attributes="0" />
+                          <Component id="btnDragon" alignment="3" min="-2" pref="70" max="-2" attributes="0" />
+                      </Group>
+                      <EmptySpace min="-2" pref="14" max="-2" attributes="0" />
+                      <Component id="lblMonsterHp" min="-2" max="-2" attributes="0" />
+                      <EmptySpace min="-2" pref="6" max="-2" attributes="0" />
+                      <Component id="pbMonster" min="-2" pref="20" max="-2" attributes="0" />
+                      <EmptySpace min="-2" pref="12" max="-2" attributes="0" />
+                      <Component id="lblEstado" min="-2" pref="36" max="-2" attributes="0" />
+                      <EmptySpace min="-2" pref="14" max="-2" attributes="0" />
+                      <Group type="103" groupAlignment="2" attributes="0">
+                          <Component id="btnD4" alignment="2" min="-2" max="-2" attributes="0" />
+                          <Component id="btnD6" alignment="2" min="-2" max="-2" attributes="0" />
+                          <Component id="lblUltimaTirada" alignment="2" min="-2" max="-2" attributes="0" />
+                      </Group>
+                      <EmptySpace min="-2" pref="14" max="-2" attributes="0" />
+                      <Component id="jScrollPane3" min="-2" pref="190" max="32767" attributes="0" />
+                      <EmptySpace min="-2" pref="14" max="-2" attributes="0" />
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="btnIniciar" alignment="3" min="-2" pref="36" max="-2" attributes="0" />
+                          <Component id="btnCancelar" alignment="3" min="-2" pref="36" max="-2" attributes="0" />
+                      </Group>
+                      <EmptySpace min="-2" pref="16" max="-2" attributes="0" />
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="lblTituloCombate">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Combate — elige monstruo, ataca y tira el dado de daño" />
+              <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="f0" green="c0" blue="60" type="rgb" /></Property><Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor"><Font name="Serif" style="1" size="16" /></Property><Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor"><Image iconType="3" name="/com/gremio/recursos/icono_swords_22.png" /></Property></Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="btnGoblin">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Goblin&#10;20 PV · CA 12 · Fácil" />
+              <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="22" green="14" blue="09" type="rgb" /></Property><Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="f0" green="c0" blue="60" type="rgb" /></Property><Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor"><Font name="Serif" style="1" size="14" /></Property><Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor"><Image iconType="3" name="/com/gremio/recursos/icono_goblin_28.png" /></Property></Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMonstruoActionPerformed" />
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="btnOgro">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Ogro&#10;50 PV · CA 14 · Medio" />
+              <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="22" green="14" blue="09" type="rgb" /></Property><Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="f0" green="c0" blue="60" type="rgb" /></Property><Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor"><Font name="Serif" style="1" size="14" /></Property><Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor"><Image iconType="3" name="/com/gremio/recursos/icono_ogro_28.png" /></Property></Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMonstruoActionPerformed" />
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="btnDragon">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Dragón&#10;100 PV · CA 16 · Difícil" />
+              <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="22" green="14" blue="09" type="rgb" /></Property><Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="f0" green="c0" blue="60" type="rgb" /></Property><Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor"><Font name="Serif" style="1" size="14" /></Property><Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor"><Image iconType="3" name="/com/gremio/recursos/icono_dragon_28.png" /></Property></Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMonstruoActionPerformed" />
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblMonsterHp">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Goblin — 20/20 PV" />
+              <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="c4" green="a8" blue="78" type="rgb" /></Property><Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor"><Font name="Serif" style="1" size="14" /></Property><Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor"><Image iconType="3" name="/com/gremio/recursos/icono_goblin_20.png" /></Property></Properties>
+            </Component>
+            <Component class="javax.swing.JProgressBar" name="pbMonster">
+              <Properties>
+                <Property name="maximum" type="int" value="20" />
+                <Property name="stringPainted" type="boolean" value="true" />
+                <Property name="value" type="int" value="20" />
+              <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="c0" green="39" blue="2b" type="rgb" /></Property></Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblEstado">
+              <Properties>
+                <Property name="horizontalAlignment" type="int" value="0" />
+                <Property name="opaque" type="boolean" value="true" />
+                <Property name="text" type="java.lang.String" value="Elige un monstruo y pulsa «Iniciar combate»" />
+              <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="22" green="14" blue="09" type="rgb" /></Property><Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="f0" green="c0" blue="60" type="rgb" /></Property><Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor"><Font name="Serif" style="2" size="14" /></Property><Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor"><Image iconType="3" name="/com/gremio/recursos/icono_swords_20.png" /></Property></Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="btnD4">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="d4" />
+              <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="22" green="14" blue="09" type="rgb" /></Property><Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="ff" green="ff" blue="ff" type="rgb" /></Property><Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor"><Font name="Serif" style="1" size="24" /></Property><Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor"><Image iconType="3" name="/com/gremio/recursos/icono_d4_36.png" /></Property></Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnD4ActionPerformed" />
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="btnD6">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="d6" />
+              <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="22" green="14" blue="09" type="rgb" /></Property><Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="ff" green="ff" blue="ff" type="rgb" /></Property><Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor"><Font name="Serif" style="1" size="24" /></Property><Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor"><Image iconType="3" name="/com/gremio/recursos/icono_d6_36.png" /></Property></Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnD6ActionPerformed" />
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblUltimaTirada">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Última tirada: —" />
+              <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="c4" green="a8" blue="78" type="rgb" /></Property><Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor"><Image iconType="3" name="/com/gremio/recursos/icono_dado_18.png" /></Property></Properties>
+            </Component>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane3">
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout" />
+              <SubComponents>
+                <Component class="javax.swing.JTextArea" name="txtConsola">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false" />
+                    <Property name="columns" type="int" value="20" />
+                    <Property name="lineWrap" type="boolean" value="true" />
+                    <Property name="rows" type="int" value="8" />
+                    <Property name="text" type="java.lang.String" value="Aquí aparecerá el desarrollo del combate." />
+                    <Property name="wrapStyleWord" type="boolean" value="true" />
+                  <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="0a" green="05" blue="05" type="rgb" /></Property><Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="c9" green="d1" blue="d9" type="rgb" /></Property><Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor"><Font name="Consolas" style="0" size="12" /></Property></Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout$JScrollPaneConstraintsDescription" />
+                  </Constraints>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Component class="javax.swing.JButton" name="btnIniciar">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Iniciar combate" />
+              <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="8b" green="1a" blue="1a" type="rgb" /></Property><Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="e8" green="d5" blue="a8" type="rgb" /></Property><Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor"><Font name="Serif" style="1" size="15" /></Property><Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor"><Image iconType="3" name="/com/gremio/recursos/icono_sword_18.png" /></Property></Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnIniciarActionPerformed" />
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="btnCancelar">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false" />
+                <Property name="text" type="java.lang.String" value="Cancelar" />
+              <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="22" green="14" blue="09" type="rgb" /></Property><Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="f0" green="c0" blue="60" type="rgb" /></Property><Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor"><Image iconType="3" name="/com/gremio/recursos/icono_cross_18.png" /></Property></Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCancelarActionPerformed" />
+              </Events>
+            </Component>
+          </SubComponents>
+        </Container>
+
+        <Container class="javax.swing.JPanel" name="panelResumen">
+          <Properties><Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="2a" green="1a" blue="0f" type="rgb" /></Property></Properties><Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Resumen">
+                <Property name="tabTitle" type="java.lang.String" value="Resumen" />
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="20" max="-2" attributes="0" />
+                      <Component id="lblTituloResumen" min="-2" max="-2" attributes="0" />
+                      <EmptySpace pref="250" max="32767" attributes="0" />
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="20" max="-2" attributes="0" />
+                      <Component id="btnAtajoCrear" min="-2" pref="100" max="-2" attributes="0" />
+                      <EmptySpace min="-2" pref="8" max="-2" attributes="0" />
+                      <Component id="btnAtajoCombate" min="-2" pref="120" max="-2" attributes="0" />
+                      <EmptySpace min="-2" pref="8" max="-2" attributes="0" />
+                      <Component id="btnReporteClase" min="-2" pref="120" max="-2" attributes="0" />
+                      <EmptySpace min="-2" pref="8" max="-2" attributes="0" />
+                      <Component id="btnReporteNivel" min="-2" pref="120" max="-2" attributes="0" />
+                      <EmptySpace min="-2" pref="8" max="-2" attributes="0" />
+                      <Component id="btnLimpiar" min="-2" pref="90" max="-2" attributes="0" />
+                      <EmptySpace pref="44" max="32767" attributes="0" />
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="20" max="-2" attributes="0" />
+                      <Component id="lblReporte" min="-2" max="-2" attributes="0" />
+                      <EmptySpace pref="240" max="32767" attributes="0" />
+                  </Group>
+                  <Component id="jScrollPane4" alignment="0" pref="640" max="32767" attributes="0" />
+                  <Component id="jScrollPane5" alignment="0" pref="640" max="32767" attributes="0" />
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="20" max="-2" attributes="0" />
+                      <Component id="lblLineas" min="-2" max="-2" attributes="0" />
+                      <EmptySpace pref="520" max="32767" attributes="0" />
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="16" max="-2" attributes="0" />
+                      <Component id="lblTituloResumen" min="-2" max="-2" attributes="0" />
+                      <EmptySpace min="-2" pref="16" max="-2" attributes="0" />
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="btnAtajoCrear" alignment="3" min="-2" max="-2" attributes="0" />
+                          <Component id="btnAtajoCombate" alignment="3" min="-2" max="-2" attributes="0" />
+                          <Component id="btnReporteClase" alignment="3" min="-2" max="-2" attributes="0" />
+                          <Component id="btnReporteNivel" alignment="3" min="-2" max="-2" attributes="0" />
+                          <Component id="btnLimpiar" alignment="3" min="-2" max="-2" attributes="0" />
+                      </Group>
+                      <EmptySpace min="-2" pref="12" max="-2" attributes="0" />
+                      <Component id="lblReporte" min="-2" max="-2" attributes="0" />
+                      <EmptySpace min="-2" pref="12" max="-2" attributes="0" />
+                      <Component id="jScrollPane4" min="-2" pref="140" max="32767" attributes="0" />
+                      <EmptySpace min="-2" pref="12" max="-2" attributes="0" />
+                      <Component id="jScrollPane5" min="-2" pref="140" max="32767" attributes="0" />
+                      <EmptySpace min="-2" pref="6" max="-2" attributes="0" />
+                      <Component id="lblLineas" min="-2" max="-2" attributes="0" />
+                      <EmptySpace min="-2" pref="12" max="-2" attributes="0" />
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="lblTituloResumen">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Resumen — reportes, actividad y persistencia" />
+              <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="f0" green="c0" blue="60" type="rgb" /></Property><Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor"><Font name="Serif" style="1" size="16" /></Property><Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor"><Image iconType="3" name="/com/gremio/recursos/icono_chart_22.png" /></Property></Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="btnAtajoCrear">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Crear" />
+              <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="d4" green="a8" blue="4a" type="rgb" /></Property><Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="1a" green="0f" blue="08" type="rgb" /></Property><Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor"><Image iconType="3" name="/com/gremio/recursos/icono_plus_18.png" /></Property></Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAtajoCrearActionPerformed" />
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="btnAtajoCombate">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Combatir" />
+              <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="8b" green="1a" blue="1a" type="rgb" /></Property><Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="e8" green="d5" blue="a8" type="rgb" /></Property><Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor"><Image iconType="3" name="/com/gremio/recursos/icono_swords_18.png" /></Property></Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAtajoCombateActionPerformed" />
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="btnReporteClase">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Por clase" />
+              <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="2a" green="5a" blue="2a" type="rgb" /></Property><Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="e8" green="d5" blue="a8" type="rgb" /></Property><Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor"><Image iconType="3" name="/com/gremio/recursos/icono_chart_18.png" /></Property></Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnReporteClaseActionPerformed" />
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="btnReporteNivel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Nivel &amp;gt; 3" />
+              <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="2a" green="5a" blue="2a" type="rgb" /></Property><Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="e8" green="d5" blue="a8" type="rgb" /></Property><Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor"><Image iconType="3" name="/com/gremio/recursos/icono_search_18.png" /></Property></Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnReporteNivelActionPerformed" />
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="btnLimpiar">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Limpiar" />
+              <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="22" green="14" blue="09" type="rgb" /></Property><Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="f0" green="c0" blue="60" type="rgb" /></Property><Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor"><Image iconType="3" name="/com/gremio/recursos/icono_broom_18.png" /></Property></Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLimpiarActionPerformed" />
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblReporte">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Reportes: aún no se han generado" />
+              <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="c4" green="a8" blue="78" type="rgb" /></Property><Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor"><Image iconType="3" name="/com/gremio/recursos/icono_chart_18.png" /></Property></Properties>
+            </Component>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane4">
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout" />
+              <SubComponents>
+                <Component class="javax.swing.JTextArea" name="txtActividad">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false" />
+                    <Property name="columns" type="int" value="20" />
+                    <Property name="lineWrap" type="boolean" value="true" />
+                    <Property name="rows" type="int" value="6" />
+                    <Property name="text" type="java.lang.String" value="Aquí aparecerán las acciones." />
+                    <Property name="wrapStyleWord" type="boolean" value="true" />
+                  <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="0a" green="05" blue="05" type="rgb" /></Property><Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="c9" green="d1" blue="d9" type="rgb" /></Property><Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor"><Font name="Consolas" style="0" size="12" /></Property></Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout$JScrollPaneConstraintsDescription" />
+                  </Constraints>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane5">
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout" />
+              <SubComponents>
+                <Component class="javax.swing.JTextArea" name="txtArchivo">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false" />
+                    <Property name="columns" type="int" value="20" />
+                    <Property name="lineWrap" type="boolean" value="true" />
+                    <Property name="rows" type="int" value="6" />
+                    <Property name="text" type="java.lang.String" value="El archivo está vacío." />
+                    <Property name="wrapStyleWord" type="boolean" value="true" />
+                  <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="0a" green="05" blue="05" type="rgb" /></Property><Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="8b" green="7d" blue="5a" type="rgb" /></Property><Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor"><Font name="Consolas" style="0" size="12" /></Property></Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout$JScrollPaneConstraintsDescription" />
+                  </Constraints>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Component class="javax.swing.JLabel" name="lblLineas">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0 líneas" />
+              <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color red="d4" green="a8" blue="4a" type="rgb" /></Property><Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor"><Image iconType="3" name="/com/gremio/recursos/icono_file_18.png" /></Property></Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>
