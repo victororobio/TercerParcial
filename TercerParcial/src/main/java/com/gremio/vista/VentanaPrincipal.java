@@ -123,16 +123,16 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         panelCrear = new javax.swing.JPanel();
         lblTituloCrear = new javax.swing.JLabel();
         lblClase = new javax.swing.JLabel();
-        cmbClase = new javax.swing.JComboBox();
+        cmbClase = new javax.swing.JComboBox<>();
         lblDadoClase = new javax.swing.JLabel();
         lblNombre = new javax.swing.JLabel();
         txtNombre = new javax.swing.JTextField();
         lblNivel = new javax.swing.JLabel();
         spNivel = new javax.swing.JSpinner();
         lblPv = new javax.swing.JLabel();
-        cmbPv = new javax.swing.JComboBox();
+        cmbPv = new javax.swing.JComboBox<>();
         lblAtributo = new javax.swing.JLabel();
-        cmbAtributo = new javax.swing.JComboBox();
+        cmbAtributo = new javax.swing.JComboBox<>();
         btnCrear = new javax.swing.JButton();
         panelGremio = new javax.swing.JPanel();
         lblContador = new javax.swing.JLabel();
@@ -173,38 +173,46 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         setBackground(new java.awt.Color(42, 26, 15));
         setForeground(new java.awt.Color(240, 192, 96));
 
-        jTabbedPane1.setBackground(new java.awt.Color(26, 15, 8));
-        jTabbedPane1.setForeground(new java.awt.Color(240, 192, 96));
-        jTabbedPane1.setFont(new java.awt.Font("Serif", 1, 13)); // NOI18N
-
+        // ---------------- Pestaña 1: Inicio ----------------
         panelInicio.setBackground(new java.awt.Color(42, 26, 15));
-
-        lblTitulo.setText("Gremio de aventureros");
-        lblTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTitulo.setFont(new java.awt.Font("Serif", java.awt.Font.BOLD, 28)); // NOI18N
         lblTitulo.setForeground(new java.awt.Color(240, 192, 96));
-        lblTitulo.setFont(new java.awt.Font("Serif", 1, 28)); // NOI18N
+        lblTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTitulo.setText("Gremio de aventureros");
         lblTitulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gremio/recursos/icono_crest_32.png"))); // NOI18N
 
-        lblSubtitulo.setText("Calabozos y Dragones");
-        lblSubtitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblSubtitulo.setFont(new java.awt.Font("Serif", java.awt.Font.ITALIC, 16)); // NOI18N
         lblSubtitulo.setForeground(new java.awt.Color(196, 168, 120));
-        lblSubtitulo.setFont(new java.awt.Font("Serif", 2, 16)); // NOI18N
+        lblSubtitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblSubtitulo.setText("Calabozos y Dragones");
 
         txtInicio.setEditable(false);
+        txtInicio.setBackground(new java.awt.Color(15, 8, 5));
         txtInicio.setColumns(20);
+        txtInicio.setFont(new java.awt.Font("Serif", java.awt.Font.PLAIN, 14)); // NOI18N
+        txtInicio.setForeground(new java.awt.Color(232, 213, 168));
         txtInicio.setLineWrap(true);
         txtInicio.setRows(8);
-        txtInicio.setText("Bienvenido, maestro del gremio.");
+        txtInicio.setText("Bienvenido, maestro del gremio.\n\n"
+                + "Crea aventureros en la pestaña «Crear», adminístralos en «Gremio» "
+                + "y hazlos pelear en «Combate» contra un Goblin, un Ogro o un Dragón.\n\n"
+                + "El ataque es automático (3d6 + bono contra la CA del monstruo); "
+                + "cuando acierten, TÚ tirarás el dado de daño: el botón del dado se iluminará.\n\n"
+                + "Todo queda registrado en registro_gremio.txt y puede revisarse en «Resumen».\n\n"
+                + "Guía rápida de abreviaturas:\n"
+                + "• d4 / d6 = dado de 4 / 6 caras; 3d6 = tres dados de 6 caras sumados.\n"
+                + "• FUE = Fuerza, DES = Destreza, CON = Constitución, INT = Inteligencia, "
+                + "SAB = Sabiduría, CAR = Carisma.\n"
+                + "• Stat = estadística principal; CA = Clase de Armadura; PV = Puntos de Vida; "
+                + "Nv = nivel; Atq = bono de ataque.");
         txtInicio.setWrapStyleWord(true);
-        txtInicio.setBackground(new java.awt.Color(15, 8, 5));
-        txtInicio.setForeground(new java.awt.Color(232, 213, 168));
-        txtInicio.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
+        txtInicio.setBorder(javax.swing.BorderFactory.createEmptyBorder(12, 12, 12, 12));
         jScrollPane1.setViewportView(txtInicio);
 
-        btnComenzar.setText("Comenzar");
         btnComenzar.setBackground(new java.awt.Color(212, 168, 74));
+        btnComenzar.setFont(new java.awt.Font("Serif", java.awt.Font.BOLD, 16)); // NOI18N
         btnComenzar.setForeground(new java.awt.Color(26, 15, 8));
-        btnComenzar.setFont(new java.awt.Font("Serif", 1, 16)); // NOI18N
+        btnComenzar.setText("Comenzar");
         btnComenzar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gremio/recursos/icono_rocket_20.png"))); // NOI18N
         btnComenzar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -225,80 +233,74 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addContainerGap(250, Short.MAX_VALUE))
         );
         panelInicioLayout.setVerticalGroup(
-            panelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelInicioLayout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addComponent(lblTitulo)
-                .addGap(6, 6, 6)
-                .addComponent(lblSubtitulo)
-                .addGap(30, 30, 30)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, Short.MAX_VALUE)
-                .addGap(28, 28, 28)
-                .addComponent(btnComenzar, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40))
+            panelInicioLayout.createSequentialGroup()
+            .addGap(40, 40, 40)
+            .addComponent(lblTitulo)
+            .addGap(6, 6, 6)
+            .addComponent(lblSubtitulo)
+            .addGap(30, 30, 30)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)
+            .addGap(28, 28, 28)
+            .addComponent(btnComenzar, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(40, 40, 40)
         );
 
-        jTabbedPane1.addTab("Inicio", panelInicio);
-
+        // ---------------- Pestaña 2: Crear ----------------
         panelCrear.setBackground(new java.awt.Color(42, 26, 15));
-
-        lblTituloCrear.setText("Crear Aventurero — elige clase y completa los datos");
+        lblTituloCrear.setFont(new java.awt.Font("Serif", java.awt.Font.BOLD, 16)); // NOI18N
         lblTituloCrear.setForeground(new java.awt.Color(240, 192, 96));
-        lblTituloCrear.setFont(new java.awt.Font("Serif", 1, 16)); // NOI18N
+        lblTituloCrear.setText("Crear Aventurero — elige clase y completa los datos");
         lblTituloCrear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gremio/recursos/icono_wizard_22.png"))); // NOI18N
 
-        lblClase.setText("Clase:");
         lblClase.setForeground(new java.awt.Color(212, 168, 74));
+        lblClase.setText("Clase:");
         lblClase.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gremio/recursos/icono_wizard_18.png"))); // NOI18N
-
-        cmbClase.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Guerrero", "Mago", "Clérigo", "Monje", "Paladín", "Explorador", "Pícaro", "Bardo" }));
-        cmbClase.setBackground(new java.awt.Color(34, 20, 9));
-        cmbClase.setForeground(new java.awt.Color(240, 192, 96));
+        cmbClase.setBackground(PANEL);
+        cmbClase.setForeground(TEXTO);
+        cmbClase.setModel(new javax.swing.DefaultComboBoxModel<>(GremioControlador.CLASES));
         cmbClase.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmbClaseActionPerformed(evt);
             }
         });
 
-        lblDadoClase.setText("Daño d6 (dado de 6 caras) · Stat FUE (Fuerza)");
+        lblDadoClase.setFont(new java.awt.Font("Serif", java.awt.Font.ITALIC, 12)); // NOI18N
         lblDadoClase.setForeground(new java.awt.Color(196, 168, 120));
-        lblDadoClase.setFont(new java.awt.Font("Serif", 2, 12)); // NOI18N
+        lblDadoClase.setText("Daño d6 (dado de 6 caras) · Stat FUE (Fuerza)");
         lblDadoClase.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gremio/recursos/icono_dado_18.png"))); // NOI18N
 
-        lblNombre.setText("Nombre:");
         lblNombre.setForeground(new java.awt.Color(212, 168, 74));
+        lblNombre.setText("Nombre:");
         lblNombre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gremio/recursos/icono_user_18.png"))); // NOI18N
-
-        txtNombre.setColumns(20);
-        txtNombre.setBackground(new java.awt.Color(34, 20, 9));
+        txtNombre.setBackground(PANEL);
         txtNombre.setForeground(new java.awt.Color(232, 213, 168));
+        txtNombre.setColumns(20);
 
-        lblNivel.setText("Nivel (1-20):");
         lblNivel.setForeground(new java.awt.Color(212, 168, 74));
+        lblNivel.setText("Nivel (1-20):");
         lblNivel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gremio/recursos/icono_star_18.png"))); // NOI18N
-
         spNivel.setModel(new javax.swing.SpinnerNumberModel(1, 1, 20, 1));
+        spNivel.setMaximumSize(new java.awt.Dimension(90, 26));
 
-        lblPv.setText("Puntos de Vida:");
         lblPv.setForeground(new java.awt.Color(212, 168, 74));
+        lblPv.setText("Puntos de Vida:");
         lblPv.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gremio/recursos/icono_heart_18.png"))); // NOI18N
-
-        cmbPv.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10", "20", "30", "40", "50", "60", "70", "80", "90", "100" }));
-        cmbPv.setBackground(new java.awt.Color(34, 20, 9));
+        cmbPv.setBackground(PANEL);
         cmbPv.setForeground(new java.awt.Color(232, 213, 168));
+        cmbPv.setModel(new javax.swing.DefaultComboBoxModel<>(puntosVida()));
+        cmbPv.setMaximumSize(new java.awt.Dimension(90, 26));
 
-        lblAtributo.setText("Armadura Pesada (sí / no)");
         lblAtributo.setForeground(new java.awt.Color(212, 168, 74));
+        lblAtributo.setText("Armadura Pesada (sí / no)");
         lblAtributo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gremio/recursos/icono_gift_18.png"))); // NOI18N
-
-        cmbAtributo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Sí", "No" }));
-        cmbAtributo.setBackground(new java.awt.Color(34, 20, 9));
+        cmbAtributo.setBackground(PANEL);
         cmbAtributo.setForeground(new java.awt.Color(232, 213, 168));
+        cmbAtributo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]{"Sí", "No"}));
 
-        btnCrear.setText("Crear Aventurero");
         btnCrear.setBackground(new java.awt.Color(212, 168, 74));
+        btnCrear.setFont(new java.awt.Font("Serif", java.awt.Font.BOLD, 16)); // NOI18N
         btnCrear.setForeground(new java.awt.Color(26, 15, 8));
-        btnCrear.setFont(new java.awt.Font("Serif", 1, 16)); // NOI18N
+        btnCrear.setText("Crear Aventurero");
         btnCrear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gremio/recursos/icono_wizard_20.png"))); // NOI18N
         btnCrear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -329,49 +331,46 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addContainerGap(300, Short.MAX_VALUE))
         );
         panelCrearLayout.setVerticalGroup(
-            panelCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelCrearLayout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(lblTituloCrear)
-                .addGap(24, 24, 24)
-                .addComponent(lblClase)
-                .addGap(4, 4, 4)
-                .addComponent(cmbClase, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(4, 4, 4)
-                .addComponent(lblDadoClase)
-                .addGap(18, 18, 18)
-                .addComponent(lblNombre)
-                .addGap(4, 4, 4)
-                .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14)
-                .addComponent(lblNivel)
-                .addGap(4, 4, 4)
-                .addComponent(spNivel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14)
-                .addComponent(lblPv)
-                .addGap(4, 4, 4)
-                .addComponent(cmbPv, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14)
-                .addComponent(lblAtributo)
-                .addGap(4, 4, 4)
-                .addComponent(cmbAtributo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24)
-                .addComponent(btnCrear, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(30, Short.MAX_VALUE))
+            panelCrearLayout.createSequentialGroup()
+            .addGap(24, 24, 24)
+            .addComponent(lblTituloCrear)
+            .addGap(24, 24, 24)
+            .addComponent(lblClase)
+            .addGap(4, 4, 4)
+            .addComponent(cmbClase, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(4, 4, 4)
+            .addComponent(lblDadoClase)
+            .addGap(18, 18, 18)
+            .addComponent(lblNombre)
+            .addGap(4, 4, 4)
+            .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(14, 14, 14)
+            .addComponent(lblNivel)
+            .addGap(4, 4, 4)
+            .addComponent(spNivel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(14, 14, 14)
+            .addComponent(lblPv)
+            .addGap(4, 4, 4)
+            .addComponent(cmbPv, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(14, 14, 14)
+            .addComponent(lblAtributo)
+            .addGap(4, 4, 4)
+            .addComponent(cmbAtributo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(24, 24, 24)
+            .addComponent(btnCrear, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addContainerGap(30, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("Crear", panelCrear);
-
+        // ---------------- Pestaña 3: Gremio ----------------
         panelGremio.setBackground(new java.awt.Color(42, 26, 15));
-
-        lblContador.setText("0 aventureros");
+        lblContador.setFont(new java.awt.Font("Serif", java.awt.Font.BOLD, 16)); // NOI18N
         lblContador.setForeground(new java.awt.Color(240, 192, 96));
-        lblContador.setFont(new java.awt.Font("Serif", 1, 16)); // NOI18N
+        lblContador.setText("0 aventureros");
         lblContador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gremio/recursos/icono_people_18.png"))); // NOI18N
 
+        btnIrCrear.setBackground(PANEL);
+        btnIrCrear.setForeground(TEXTO);
         btnIrCrear.setText("Crear otro");
-        btnIrCrear.setBackground(new java.awt.Color(34, 20, 9));
-        btnIrCrear.setForeground(new java.awt.Color(240, 192, 96));
         btnIrCrear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gremio/recursos/icono_plus_18.png"))); // NOI18N
         btnIrCrear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -380,7 +379,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
 
         panelTarjetas.setBackground(new java.awt.Color(42, 26, 15));
-        panelTarjetas.setLayout(new javax.swing.BoxLayout(panelTarjetas, javax.swing.BoxLayout.PAGE_AXIS));
+        panelTarjetas.setLayout(new javax.swing.BoxLayout(panelTarjetas, javax.swing.BoxLayout.Y_AXIS));
         jScrollPane2.setViewportView(panelTarjetas);
 
         javax.swing.GroupLayout panelGremioLayout = new javax.swing.GroupLayout(panelGremio);
@@ -391,123 +390,124 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             .addGroup(panelGremioLayout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(lblContador)
-                .addGap(360, 360, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 360, Short.MAX_VALUE)
                 .addComponent(btnIrCrear)
                 .addGap(20, 20, 20))
         );
         panelGremioLayout.setVerticalGroup(
-            panelGremioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelGremioLayout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addGroup(panelGremioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblContador)
-                    .addComponent(btnIrCrear))
-                .addGap(16, 16, 16)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 400, Short.MAX_VALUE)
-                .addGap(16, 16, 16))
+            panelGremioLayout.createSequentialGroup()
+            .addGap(16, 16, 16)
+            .addGroup(panelGremioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(lblContador)
+                .addComponent(btnIrCrear))
+            .addGap(16, 16, 16)
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+            .addGap(16, 16, 16)
         );
 
-        jTabbedPane1.addTab("Gremio", panelGremio);
-
+        // ---------------- Pestaña 4: Combate ----------------
         panelCombate.setBackground(new java.awt.Color(42, 26, 15));
-
-        lblTituloCombate.setText("Combate — elige monstruo, ataca y tira el dado de daño");
+        lblTituloCombate.setFont(new java.awt.Font("Serif", java.awt.Font.BOLD, 16)); // NOI18N
         lblTituloCombate.setForeground(new java.awt.Color(240, 192, 96));
-        lblTituloCombate.setFont(new java.awt.Font("Serif", 1, 16)); // NOI18N
+        lblTituloCombate.setText("Combate — elige monstruo, ataca y tira el dado de daño");
         lblTituloCombate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gremio/recursos/icono_swords_22.png"))); // NOI18N
 
-        btnGoblin.setBackground(new java.awt.Color(34, 20, 9));
-        btnGoblin.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
-        btnGoblin.setForeground(new java.awt.Color(240, 192, 96));
-        btnGoblin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gremio/recursos/icono_goblin_28.png"))); // NOI18N
+        btnGoblin.setBackground(PANEL);
+        btnGoblin.setFont(new java.awt.Font("Serif", java.awt.Font.BOLD, 14)); // NOI18N
+        btnGoblin.setForeground(TEXTO);
         btnGoblin.setText("Goblin\n20 PV · CA 12 · Fácil");
+        btnGoblin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gremio/recursos/icono_goblin_28.png"))); // NOI18N
         btnGoblin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnMonstruoActionPerformed(evt);
             }
         });
 
-        btnOgro.setBackground(new java.awt.Color(34, 20, 9));
-        btnOgro.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
-        btnOgro.setForeground(new java.awt.Color(240, 192, 96));
-        btnOgro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gremio/recursos/icono_ogro_28.png"))); // NOI18N
+        btnOgro.setBackground(PANEL);
+        btnOgro.setFont(new java.awt.Font("Serif", java.awt.Font.BOLD, 14)); // NOI18N
+        btnOgro.setForeground(TEXTO);
         btnOgro.setText("Ogro\n50 PV · CA 14 · Medio");
+        btnOgro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gremio/recursos/icono_ogro_28.png"))); // NOI18N
         btnOgro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnMonstruoActionPerformed(evt);
             }
         });
 
-        btnDragon.setBackground(new java.awt.Color(34, 20, 9));
-        btnDragon.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
-        btnDragon.setForeground(new java.awt.Color(240, 192, 96));
-        btnDragon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gremio/recursos/icono_dragon_28.png"))); // NOI18N
+        btnDragon.setBackground(PANEL);
+        btnDragon.setFont(new java.awt.Font("Serif", java.awt.Font.BOLD, 14)); // NOI18N
+        btnDragon.setForeground(TEXTO);
         btnDragon.setText("Dragón\n100 PV · CA 16 · Difícil");
+        btnDragon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gremio/recursos/icono_dragon_28.png"))); // NOI18N
         btnDragon.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnMonstruoActionPerformed(evt);
             }
         });
 
-        lblMonsterHp.setText("Goblin — 20/20 PV");
+        lblMonsterHp.setFont(new java.awt.Font("Serif", java.awt.Font.BOLD, 14)); // NOI18N
         lblMonsterHp.setForeground(new java.awt.Color(196, 168, 120));
-        lblMonsterHp.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
+        lblMonsterHp.setText("Goblin — 20/20 PV");
         lblMonsterHp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gremio/recursos/icono_goblin_20.png"))); // NOI18N
 
-        pbMonster.setMaximum(20);
-        pbMonster.setStringPainted(true);
-        pbMonster.setValue(20);
         pbMonster.setForeground(new java.awt.Color(192, 57, 43));
+        pbMonster.setMaximum(20);
+        pbMonster.setValue(20);
+        pbMonster.setStringPainted(true);
 
-        lblEstado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblEstado.setOpaque(true);
-        lblEstado.setText("Elige un monstruo y pulsa «Iniciar combate»");
-        lblEstado.setBackground(new java.awt.Color(34, 20, 9));
+        lblEstado.setBackground(PANEL);
+        lblEstado.setFont(new java.awt.Font("Serif", java.awt.Font.ITALIC, 14)); // NOI18N
         lblEstado.setForeground(new java.awt.Color(240, 192, 96));
-        lblEstado.setFont(new java.awt.Font("Serif", 2, 14)); // NOI18N
-        lblEstado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gremio/recursos/icono_swords_20.png"))); // NOI18N
+        lblEstado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblEstado.setText("Elige un monstruo y pulsa «Iniciar combate»");
+            lblEstado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gremio/recursos/icono_swords_20.png"))); // NOI18N
+        lblEstado.setOpaque(true);
+        lblEstado.setBorder(javax.swing.BorderFactory.createEmptyBorder(8, 8, 8, 8));
 
+        btnD4.setBackground(PANEL);
+        btnD4.setFont(new java.awt.Font("Serif", java.awt.Font.BOLD, 24)); // NOI18N
+        btnD4.setForeground(java.awt.Color.WHITE);
         btnD4.setText("d4");
-        btnD4.setBackground(new java.awt.Color(34, 20, 9));
-        btnD4.setForeground(new java.awt.Color(255, 255, 255));
-        btnD4.setFont(new java.awt.Font("Serif", 1, 24)); // NOI18N
         btnD4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gremio/recursos/icono_d4_36.png"))); // NOI18N
+        btnD4.setPreferredSize(new java.awt.Dimension(90, 70));
         btnD4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnD4ActionPerformed(evt);
             }
         });
 
+        btnD6.setBackground(PANEL);
+        btnD6.setFont(new java.awt.Font("Serif", java.awt.Font.BOLD, 24)); // NOI18N
+        btnD6.setForeground(java.awt.Color.WHITE);
         btnD6.setText("d6");
-        btnD6.setBackground(new java.awt.Color(34, 20, 9));
-        btnD6.setForeground(new java.awt.Color(255, 255, 255));
-        btnD6.setFont(new java.awt.Font("Serif", 1, 24)); // NOI18N
         btnD6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gremio/recursos/icono_d6_36.png"))); // NOI18N
+        btnD6.setPreferredSize(new java.awt.Dimension(90, 70));
         btnD6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnD6ActionPerformed(evt);
             }
         });
 
-        lblUltimaTirada.setText("Última tirada: —");
         lblUltimaTirada.setForeground(new java.awt.Color(196, 168, 120));
+        lblUltimaTirada.setText("Última tirada: —");
         lblUltimaTirada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gremio/recursos/icono_dado_18.png"))); // NOI18N
 
         txtConsola.setEditable(false);
+        txtConsola.setBackground(new java.awt.Color(10, 5, 5));
         txtConsola.setColumns(20);
+        txtConsola.setFont(new java.awt.Font("Consolas", java.awt.Font.PLAIN, 12)); // NOI18N
+        txtConsola.setForeground(new java.awt.Color(201, 209, 217));
         txtConsola.setLineWrap(true);
         txtConsola.setRows(8);
         txtConsola.setText("Aquí aparecerá el desarrollo del combate.");
         txtConsola.setWrapStyleWord(true);
-        txtConsola.setBackground(new java.awt.Color(10, 5, 5));
-        txtConsola.setForeground(new java.awt.Color(201, 209, 217));
-        txtConsola.setFont(new java.awt.Font("Consolas", 0, 12)); // NOI18N
+        txtConsola.setBorder(javax.swing.BorderFactory.createEmptyBorder(8, 8, 8, 8));
         jScrollPane3.setViewportView(txtConsola);
 
-        btnIniciar.setText("Iniciar combate");
         btnIniciar.setBackground(new java.awt.Color(139, 26, 26));
+        btnIniciar.setFont(new java.awt.Font("Serif", java.awt.Font.BOLD, 15)); // NOI18N
         btnIniciar.setForeground(new java.awt.Color(232, 213, 168));
-        btnIniciar.setFont(new java.awt.Font("Serif", 1, 15)); // NOI18N
+        btnIniciar.setText("Iniciar combate");
         btnIniciar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gremio/recursos/icono_sword_18.png"))); // NOI18N
         btnIniciar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -515,11 +515,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        btnCancelar.setEnabled(false);
+        btnCancelar.setBackground(PANEL);
+        btnCancelar.setForeground(TEXTO);
         btnCancelar.setText("Cancelar");
-        btnCancelar.setBackground(new java.awt.Color(34, 20, 9));
-        btnCancelar.setForeground(new java.awt.Color(240, 192, 96));
         btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gremio/recursos/icono_cross_18.png"))); // NOI18N
+        btnCancelar.setEnabled(false);
         btnCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCancelarActionPerformed(evt);
@@ -532,80 +532,78 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             panelCombateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelCombateLayout.createSequentialGroup()
                 .addGap(20, 20, 20)
+                .addComponent(lblTituloCombate)
+                .addContainerGap(200, Short.MAX_VALUE))
+            .addGroup(panelCombateLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(btnGoblin, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
+                .addComponent(btnOgro, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
+                .addComponent(btnDragon, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(28, Short.MAX_VALUE))
+            .addGroup(panelCombateLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
                 .addGroup(panelCombateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblMonsterHp, javax.swing.GroupLayout.DEFAULT_SIZE, 580, Short.MAX_VALUE)
                     .addComponent(pbMonster, javax.swing.GroupLayout.DEFAULT_SIZE, 580, Short.MAX_VALUE)
                     .addComponent(lblEstado, javax.swing.GroupLayout.DEFAULT_SIZE, 580, Short.MAX_VALUE))
                 .addGap(20, 20, 20))
+            .addGroup(panelCombateLayout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addComponent(btnD4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addComponent(btnD6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addComponent(lblUltimaTirada)
+                .addContainerGap(60, Short.MAX_VALUE))
             .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 640, Short.MAX_VALUE)
             .addGroup(panelCombateLayout.createSequentialGroup()
-                .addGroup(panelCombateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelCombateLayout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(lblTituloCombate))
-                    .addGroup(panelCombateLayout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(btnGoblin)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnOgro, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnDragon, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelCombateLayout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addComponent(btnD4)
-                        .addGap(40, 40, 40)
-                        .addComponent(btnD6)
-                        .addGap(40, 40, 40)
-                        .addComponent(lblUltimaTirada))
-                    .addGroup(panelCombateLayout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(btnIniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(12, 12, 12)
-                        .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addGap(20, 20, 20)
+                .addComponent(btnIniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
+                .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(268, Short.MAX_VALUE))
         );
         panelCombateLayout.setVerticalGroup(
-            panelCombateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelCombateLayout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(lblTituloCombate)
-                .addGap(16, 16, 16)
-                .addGroup(panelCombateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnGoblin, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnOgro, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnDragon, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(14, 14, 14)
-                .addComponent(lblMonsterHp)
-                .addGap(6, 6, 6)
-                .addComponent(pbMonster, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
-                .addComponent(lblEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14)
-                .addGroup(panelCombateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(btnD4)
-                    .addComponent(btnD6)
-                    .addComponent(lblUltimaTirada))
-                .addGap(14, 14, 14)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 190, Short.MAX_VALUE)
-                .addGap(14, 14, 14)
-                .addGroup(panelCombateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnIniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(16, 16, 16))
+            panelCombateLayout.createSequentialGroup()
+            .addGap(16, 16, 16)
+            .addComponent(lblTituloCombate)
+            .addGap(16, 16, 16)
+            .addGroup(panelCombateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(btnGoblin, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnOgro, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnDragon, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGap(14, 14, 14)
+            .addComponent(lblMonsterHp)
+            .addGap(6, 6, 6)
+            .addComponent(pbMonster, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(12, 12, 12)
+            .addComponent(lblEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(14, 14, 14)
+            .addGroup(panelCombateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                .addComponent(btnD4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnD6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblUltimaTirada))
+            .addGap(14, 14, 14)
+            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
+            .addGap(14, 14, 14)
+            .addGroup(panelCombateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(btnIniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGap(16, 16, 16)
         );
 
-        jTabbedPane1.addTab("Combate", panelCombate);
-
+        // ---------------- Pestaña 5: Resumen ----------------
         panelResumen.setBackground(new java.awt.Color(42, 26, 15));
-
-        lblTituloResumen.setText("Resumen — reportes, actividad y persistencia");
+        lblTituloResumen.setFont(new java.awt.Font("Serif", java.awt.Font.BOLD, 16)); // NOI18N
         lblTituloResumen.setForeground(new java.awt.Color(240, 192, 96));
-        lblTituloResumen.setFont(new java.awt.Font("Serif", 1, 16)); // NOI18N
+        lblTituloResumen.setText("Resumen — reportes, actividad y persistencia");
         lblTituloResumen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gremio/recursos/icono_chart_22.png"))); // NOI18N
 
-        btnAtajoCrear.setText("Crear");
-        btnAtajoCrear.setBackground(new java.awt.Color(212, 168, 74));
+        btnAtajoCrear.setBackground(ORO);
         btnAtajoCrear.setForeground(new java.awt.Color(26, 15, 8));
+        btnAtajoCrear.setText("Crear");
         btnAtajoCrear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gremio/recursos/icono_plus_18.png"))); // NOI18N
         btnAtajoCrear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -613,9 +611,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        btnAtajoCombate.setText("Combatir");
         btnAtajoCombate.setBackground(new java.awt.Color(139, 26, 26));
         btnAtajoCombate.setForeground(new java.awt.Color(232, 213, 168));
+        btnAtajoCombate.setText("Combatir");
         btnAtajoCombate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gremio/recursos/icono_swords_18.png"))); // NOI18N
         btnAtajoCombate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -623,9 +621,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        btnReporteClase.setText("Por clase");
         btnReporteClase.setBackground(new java.awt.Color(42, 90, 42));
         btnReporteClase.setForeground(new java.awt.Color(232, 213, 168));
+        btnReporteClase.setText("Por clase");
         btnReporteClase.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gremio/recursos/icono_chart_18.png"))); // NOI18N
         btnReporteClase.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -633,9 +631,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        btnReporteNivel.setText("Nivel &gt; 3");
         btnReporteNivel.setBackground(new java.awt.Color(42, 90, 42));
         btnReporteNivel.setForeground(new java.awt.Color(232, 213, 168));
+        btnReporteNivel.setText("Nivel > 3");
         btnReporteNivel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gremio/recursos/icono_search_18.png"))); // NOI18N
         btnReporteNivel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -643,9 +641,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
 
+        btnLimpiar.setBackground(PANEL);
+        btnLimpiar.setForeground(TEXTO);
         btnLimpiar.setText("Limpiar");
-        btnLimpiar.setBackground(new java.awt.Color(34, 20, 9));
-        btnLimpiar.setForeground(new java.awt.Color(240, 192, 96));
         btnLimpiar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gremio/recursos/icono_broom_18.png"))); // NOI18N
         btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -653,94 +651,115 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        lblReporte.setText("Reportes: aún no se han generado");
         lblReporte.setForeground(new java.awt.Color(196, 168, 120));
+        lblReporte.setText("Reportes: aún no se han generado");
         lblReporte.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gremio/recursos/icono_chart_18.png"))); // NOI18N
 
         txtActividad.setEditable(false);
+        txtActividad.setBackground(new java.awt.Color(10, 5, 5));
         txtActividad.setColumns(20);
+        txtActividad.setFont(new java.awt.Font("Consolas", java.awt.Font.PLAIN, 12)); // NOI18N
+        txtActividad.setForeground(new java.awt.Color(201, 209, 217));
         txtActividad.setLineWrap(true);
         txtActividad.setRows(6);
         txtActividad.setText("Aquí aparecerán las acciones.");
         txtActividad.setWrapStyleWord(true);
-        txtActividad.setBackground(new java.awt.Color(10, 5, 5));
-        txtActividad.setForeground(new java.awt.Color(201, 209, 217));
-        txtActividad.setFont(new java.awt.Font("Consolas", 0, 12)); // NOI18N
+        txtActividad.setBorder(javax.swing.BorderFactory.createEmptyBorder(8, 8, 8, 8));
         jScrollPane4.setViewportView(txtActividad);
 
         txtArchivo.setEditable(false);
+        txtArchivo.setBackground(new java.awt.Color(10, 5, 5));
         txtArchivo.setColumns(20);
+        txtArchivo.setFont(new java.awt.Font("Consolas", java.awt.Font.PLAIN, 12)); // NOI18N
+        txtArchivo.setForeground(new java.awt.Color(139, 125, 90));
         txtArchivo.setLineWrap(true);
         txtArchivo.setRows(6);
         txtArchivo.setText("El archivo está vacío.");
         txtArchivo.setWrapStyleWord(true);
-        txtArchivo.setBackground(new java.awt.Color(10, 5, 5));
-        txtArchivo.setForeground(new java.awt.Color(139, 125, 90));
-        txtArchivo.setFont(new java.awt.Font("Consolas", 0, 12)); // NOI18N
+        txtArchivo.setBorder(javax.swing.BorderFactory.createEmptyBorder(8, 8, 8, 8));
         jScrollPane5.setViewportView(txtArchivo);
 
-        lblLineas.setText("0 líneas");
         lblLineas.setForeground(new java.awt.Color(212, 168, 74));
+        lblLineas.setText("0 líneas");
         lblLineas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/gremio/recursos/icono_file_18.png"))); // NOI18N
 
         javax.swing.GroupLayout panelResumenLayout = new javax.swing.GroupLayout(panelResumen);
         panelResumen.setLayout(panelResumenLayout);
         panelResumenLayout.setHorizontalGroup(
             panelResumenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelResumenLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(lblTituloResumen)
+                .addContainerGap(250, Short.MAX_VALUE))
+            .addGroup(panelResumenLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(btnAtajoCrear, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(8, 8, 8)
+                .addComponent(btnAtajoCombate, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(8, 8, 8)
+                .addComponent(btnReporteClase, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(8, 8, 8)
+                .addComponent(btnReporteNivel, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(8, 8, 8)
+                .addComponent(btnLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(44, Short.MAX_VALUE))
+            .addGroup(panelResumenLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(lblReporte)
+                .addContainerGap(240, Short.MAX_VALUE))
             .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 640, Short.MAX_VALUE)
             .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 640, Short.MAX_VALUE)
             .addGroup(panelResumenLayout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addGroup(panelResumenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblTituloResumen)
-                    .addGroup(panelResumenLayout.createSequentialGroup()
-                        .addComponent(btnAtajoCrear, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(8, 8, 8)
-                        .addComponent(btnAtajoCombate, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(8, 8, 8)
-                        .addComponent(btnReporteClase, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(8, 8, 8)
-                        .addComponent(btnReporteNivel, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(8, 8, 8)
-                        .addComponent(btnLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(lblReporte)
-                    .addComponent(lblLineas))
-                .addContainerGap(91, Short.MAX_VALUE))
+                .addComponent(lblLineas)
+                .addContainerGap(520, Short.MAX_VALUE))
         );
         panelResumenLayout.setVerticalGroup(
-            panelResumenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelResumenLayout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(lblTituloResumen)
-                .addGap(16, 16, 16)
-                .addGroup(panelResumenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAtajoCrear)
-                    .addComponent(btnAtajoCombate)
-                    .addComponent(btnReporteClase)
-                    .addComponent(btnReporteNivel)
-                    .addComponent(btnLimpiar))
-                .addGap(12, 12, 12)
-                .addComponent(lblReporte)
-                .addGap(12, 12, 12)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 140, Short.MAX_VALUE)
-                .addGap(12, 12, 12)
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 140, Short.MAX_VALUE)
-                .addGap(6, 6, 6)
-                .addComponent(lblLineas)
-                .addGap(12, 12, 12))
+            panelResumenLayout.createSequentialGroup()
+            .addGap(16, 16, 16)
+            .addComponent(lblTituloResumen)
+            .addGap(16, 16, 16)
+            .addGroup(panelResumenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(btnAtajoCrear)
+                .addComponent(btnAtajoCombate)
+                .addComponent(btnReporteClase)
+                .addComponent(btnReporteNivel)
+                .addComponent(btnLimpiar))
+            .addGap(12, 12, 12)
+            .addComponent(lblReporte)
+            .addGap(12, 12, 12)
+            .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
+            .addGap(12, 12, 12)
+            .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
+            .addGap(6, 6, 6)
+            .addComponent(lblLineas)
+            .addGap(12, 12, 12)
         );
 
+        // ---------------- JTabbedPane principal ----------------
+        jTabbedPane1.setBackground(new java.awt.Color(26, 15, 8));
+        jTabbedPane1.setForeground(new java.awt.Color(240, 192, 96));
+        jTabbedPane1.setFont(new java.awt.Font("Serif", java.awt.Font.BOLD, 13)); // NOI18N
+        jTabbedPane1.addTab("Inicio", panelInicio);
+        jTabbedPane1.setIconAt(0, icono("home", 16));
+        jTabbedPane1.addTab("Crear", panelCrear);
+        jTabbedPane1.setIconAt(1, icono("wizard", 16));
+        jTabbedPane1.addTab("Gremio", panelGremio);
+        jTabbedPane1.setIconAt(2, icono("people", 16));
+        jTabbedPane1.addTab("Combate", panelCombate);
+        jTabbedPane1.setIconAt(3, icono("swords", 16));
         jTabbedPane1.addTab("Resumen", panelResumen);
+        jTabbedPane1.setIconAt(4, icono("chart", 16));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 660, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 520, Short.MAX_VALUE)
         );
 
         pack();
@@ -1232,9 +1251,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnOgro;
     private javax.swing.JButton btnReporteClase;
     private javax.swing.JButton btnReporteNivel;
-    private javax.swing.JComboBox cmbAtributo;
-    private javax.swing.JComboBox cmbClase;
-    private javax.swing.JComboBox cmbPv;
+    private javax.swing.JComboBox<String> cmbClase;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -1248,8 +1265,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel lblEstado;
     private javax.swing.JLabel lblLineas;
     private javax.swing.JLabel lblMonsterHp;
-    private javax.swing.JLabel lblNivel;
     private javax.swing.JLabel lblNombre;
+    private javax.swing.JLabel lblNivel;
     private javax.swing.JLabel lblPv;
     private javax.swing.JLabel lblReporte;
     private javax.swing.JLabel lblSubtitulo;
@@ -1266,8 +1283,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel panelTarjetas;
     private javax.swing.JProgressBar pbMonster;
     private javax.swing.JSpinner spNivel;
+    private javax.swing.JComboBox<String> cmbPv;
     private javax.swing.JTextArea txtActividad;
     private javax.swing.JTextArea txtArchivo;
+    private javax.swing.JComboBox<String> cmbAtributo;
     private javax.swing.JTextArea txtConsola;
     private javax.swing.JTextArea txtInicio;
     private javax.swing.JTextField txtNombre;

@@ -1,0 +1,17 @@
+# Ignorar artefactos compilados y carpetas de construcción
+/target/
+**/*.class
+/nbbuild/
+/dist/
+/build/
+
+# El archivo de persistencia se genera en ejecución (NO se sube a Git)
+/registro_gremio.txt
+
+# Configuración privada del IDE / sistemas operativos
+/nbproject/private/
+.idea/
+*.iml
+*.log
+.DS_Store
+Thumbs.db
