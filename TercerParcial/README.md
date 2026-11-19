@@ -1,1 +1,1 @@
-
+Simulador de gremio de aventureros desarrollado en Java 11 con Maven y arquitectura MVC. Permite registrar ocho clases de personajes con reglas D&D 5e, subir de nivel, curar, consultar estadísticas y combatir contra Goblin, Ogro y Dragón usando dados d4 y d6, críticos y pifias. Los eventos se guardan en registro_gremio.txt y la interfaz gráfica es un JFrame Form con cinco pestañas e iconos PNG. El proyecto incluye 42 pruebas JUnit 5 que validan el modelo, la persistencia y las reglas de combate.
