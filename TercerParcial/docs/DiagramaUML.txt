@@ -1,0 +1,302 @@
+// Diagrama de clases del gremio en notación UML textual (compatible con PlantUML).
+@startuml
+' ============================================================
+' TercerParcial - Gremio de Aventureros
+' UML textual. Para exportar: PEG | PlantUML o NetBeans > Exportar como PNG/PDF.
+' ============================================================
+
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+
+package "modelo" {
+
+  interface IAccionCombate {
+    +ejecutarAccionCombate() : String
+  }
+
+  abstract class Aventurero {
+    -{static} CLAVES_STATS : String[]
+    -{static} NIVEL_MAXIMO : int = 20
+    -{static} ALEATORIO : Random
+    -nombre : String
+    -nivel : int
+    -pvMaximos : int
+    -hpActual : int
+    -estadisticas : int[]
+    +Aventurero()
+    +Aventurero(nombre : String, nivel : int)
+    +Aventurero(nombre : String, nivel : int, pvMaximos : int)
+    ~Aventurero(nombre, nivel, pvMaximos, estadisticas : int[])
+    +{static} tirar4d6DropLowest() : int
+    +{static} modificador(stat : int) : int
+    +getStatValor(clave : String) : int
+    +getCompetencia() : int
+    +getBonoAtaque() : int
+    +calcularCA() : int
+    #usaArmaduraPesada() : boolean
+    #bonoCAAdicional() : int
+    +subirNivel() : void
+    +subirNivel(cantidad : int) : void
+    +recibirDano(dano : int) : void
+    +curar() : void
+    +estaVivo() : boolean
+    +getLineaRegistro() : String
+    +getResumenStats() : String
+    +getDetalleStats() : String
+    +{abstract} getDadoDano() : int
+    +{abstract} getStatPrincipal() : String
+    +{abstract} getIcono() : String
+    +{abstract} getDescripcionAtributo() : String
+    +{abstract} ejecutarAccionCombate() : String
+    +toString() : String
+  }
+
+  class Guerrero {
+    -armaduraPesada : boolean
+    +Guerrero(nombre, nivel, puntosVida, armaduraPesada : boolean)
+    ~Guerrero(nombre, nivel, puntosVida, armaduraPesada, estadisticas)
+    +isArmaduraPesada() : boolean
+    +setArmaduraPesada(v : boolean) : void
+    #usaArmaduraPesada() : boolean
+    +getDadoDano() : int
+    +getStatPrincipal() : String
+    +getIcono() : String
+    +getDescripcionClase() : String
+    +getDescripcionAtributo() : String
+    +ejecutarAccionCombate() : String
+  }
+
+  class Mago {
+    -espaciosConjuro : int
+    +Mago(nombre, nivel, puntosVida, espaciosConjuro : int)
+    +Mago(nombre, nivel, puntosVida)
+    +getDadoDano() : int
+    +getStatPrincipal() : String
+    +getIcono() : String
+    +getDescripcionAtributo() : String
+    +ejecutarAccionCombate() : String
+  }
+
+  class Clerigo {
+    -diosVenerado : String
+    +Clerigo(nombre, nivel, puntosVida, diosVenerado : String)
+    +getDadoDano() : int
+    +getStatPrincipal() : String
+    +getIcono() : String
+    +getDescripcionAtributo() : String
+    +ejecutarAccionCombate() : String
+  }
+
+  class Monje {
+    -puntosKi : int
+    +Monje(nombre, nivel, puntosVida, puntosKi : int)
+    #bonoCAAdicional() : int
+    +getDadoDano() : int
+    +getStatPrincipal() : String
+    +getIcono() : String
+    +getDescripcionAtributo() : String
+    +ejecutarAccionCombate() : String
+  }
+
+  class Paladin {
+    -puntosFuerza : int
+    -armaduraPesada : boolean
+    +Paladin(nombre, nivel, puntosVida, puntosFuerza : int)
+    #usaArmaduraPesada() : boolean
+    +getDadoDano() : int
+    +getStatPrincipal() : String
+    +getIcono() : String
+    +getDescripcionAtributo() : String
+    +ejecutarAccionCombate() : String
+  }
+
+  class Explorador {
+    -terrenoFavorecido : String
+    +Explorador(nombre, nivel, puntosVida, terrenoFavorecido : String)
+    +getDadoDano() : int
+    +getStatPrincipal() : String
+    +getIcono() : String
+    +getDescripcionAtributo() : String
+    +ejecutarAccionCombate() : String
+  }
+
+  class Picaro {
+    -herramientasLadron : boolean
+    +Picaro(nombre, nivel, puntosVida, herramientasLadron : boolean)
+    +getDadoDano() : int
+    +getStatPrincipal() : String
+    +getIcono() : String
+    +getDescripcionAtributo() : String
+    +ejecutarAccionCombate() : String
+  }
+
+  class Bardo {
+    -instrumentoMusical : String
+    +Bardo(nombre, nivel, puntosVida, instrumentoMusical : String)
+    +getDadoDano() : int
+    +getStatPrincipal() : String
+    +getIcono() : String
+    +getDescripcionAtributo() : String
+    +ejecutarAccionCombate() : String
+  }
+
+  class Monstruo {
+    -{final} nombre : String
+    -{final} hpMaximos : int
+    -{final} ca : int
+    -{final} dificultad : String
+    -{final} icono : String
+    -hp : int
+    -Monstruo(nombre, hpMaximos, ca, dificultad, icono)
+    +{static} crearGoblin() : Monstruo
+    +{static} crearOgro() : Monstruo
+    +{static} crearDragon() : Monstruo
+    +setHp(hp : int) : void
+    +estaVivo() : boolean
+    +toString() : String
+  }
+
+  class RegistroGremio <<final, utility>> {
+    -{static final} ARCHIVO : String = "registro_gremio.txt"
+    -{static final} FORMATO : DateTimeFormatter
+    -RegistroGremio()
+    +{static} registrar(descripcion : String) : void
+    +{static} registrar(archivo : Path, descripcion : String) : void
+    +{static} leer(archivo : Path) : List<String>
+    +{static} leerRegistro() : List<String>
+    +{static} getArchivo() : String
+  }
+}
+
+package "controlador" {
+
+  class GremioControlador {
+    -{static final} CLASES : String[]
+    -aventureros : List<Aventurero>
+    +{static} etiquetaAtributo(clase : String) : String
+    +{static} pistaClase(clase : String) : String
+    +crearAventurero(clase, nombre, nivel, pv, atributo) : Aventurero
+    +agregarAventurero(a : Aventurero) : void
+    +listarAventureros() : List<Aventurero>
+    +getCantidadAventureros() : int
+    +subirNivel(a : Aventurero, cantidad : int) : void
+    +recibirDano(a : Aventurero, dano : int) : void
+    +curar(a : Aventurero) : void
+    +eliminar(a : Aventurero) : void
+    +generarReportePorClase() : Map<String,Integer>
+    +generarReporteNivelMayor(nivel : int) : List<Aventurero>
+    +registrarEvento(tipo, descripcion) : void
+    +leerRegistro() : List<String>
+  }
+
+  class CombateControlador {
+    -{static final} RONDAS_MAXIMAS : int = 5
+    -{static final} MONSTRUOS : String[]
+    -aventureros : List<Aventurero>
+    -bitacora : List<String>
+    -aleatorio : Random
+    -monstruo : Monstruo
+    -orden : List<Aventurero>
+    -turnoActual : int
+    -ronda : int
+    -activo : boolean
+    -esperandoDano : boolean
+    -claseDano : int
+    -factorDano : int
+    -aventureroActual : Aventurero
+    -estado : String
+    -resultado : String
+    +{static} crearMonstruo(nombre : String) : Monstruo
+    +roll3d6() : Tirada
+    +iniciarCombate(enemigo : Monstruo) : void
+    +procesarTurno() : void
+    +aplicarDano(valorDado : int) : void
+    +cancelar() : void
+    +getBitacora() : List<String>
+    +{static} bitacoraComoTexto(lineas) : String
+  }
+
+  class "CombateControlador.Tirada" as Tirada <<static final>> {
+    -{final} dados : int[]
+    -{final} total : int
+    -{final} critico : boolean
+    -{final} pifia : boolean
+    -Tirada(dados : int[])
+    +getDados() : int[]
+    +getTotal() : int
+    +isCritico() : boolean
+    +isPifia() : boolean
+  }
+}
+
+package "vista" {
+
+  class VentanaPrincipal <<JFrame Form>> {
+    -{static final} FONDO : Color
+    -{static final} TEXTO : Color
+    -gremioControlador : GremioControlador
+    -combateControlador : CombateControlador
+    -dadoManual : Random
+    -claseSeleccionada : String
+    -monstruoSeleccionado : String
+    -ultimaTirada : String
+    ~VentanaPrincipal()
+    -initComponents() : void
+    -btnCrearActionPerformed(evt) : void
+    -btnIniciarActionPerformed(evt) : void
+    -btnD4ActionPerformed(evt) : void
+    -btnD6ActionPerformed(evt) : void
+    -btnReporteClaseActionPerformed(evt) : void
+    -btnReporteNivelActionPerformed(evt) : void
+    +{static} main(args : String[]) : void
+  }
+}
+
+' ---------- RELACIONES ----------
+IAccionCombate <|.. Aventurero        : implementa (realización)
+
+Aventurero <|-- Guerrero              : herencia
+Aventurero <|-- Mago                  : herencia
+Aventurero <|-- Clerigo               : herencia
+Aventurero <|-- Monje                 : herencia
+Aventurero <|-- Paladin               : herencia
+Aventurero <|-- Explorador            : herencia
+Aventurero <|-- Picaro                : herencia
+Aventurero <|-- Bardo                 : herencia
+
+GremioControlador o-- Aventurero      : agregación 1..* (colección polimórfica)
+CombateControlador o-- Aventurero     : agregación 1..* (copia de turnos)
+CombateControlador *-- Monstruo       : composición 1 (dueño del combate)
+CombateControlador *-- Tirada         : composición 3 (3d6)
+VentanaPrincipal *-- GremioControlador    : composición 1
+VentanaPrincipal *-- CombateControlador   : composición 0..1
+
+GremioControlador ..> RegistroGremio  : dependencia (persistencia)
+CombateControlador ..> RegistroGremio : dependencia (bitácora)
+GremioControlador ..> Aventurero      : dependencia (fábrica crearAventurero)
+VentanaPrincipal ..> GremioControlador : dependencia (delegación de eventos)
+VentanaPrincipal ..> CombateControlador : dependencia (delegación de eventos)
+
+note right of Aventurero
+  Polimorfismo:
+  • Sobreescritura: ejecutarAccionCombate(),
+    calcularCA(), getDadoDano(), getStatPrincipal(),
+    getIcono(), getDescripcionAtributo(), toString()
+  • Sobrecarga: 3 constructores públicos +
+    1 constructor de paquete; subirNivel()/subirNivel(int)
+  • getters/setters/toString concentrados en Aventurero
+end note
+
+note right of GremioControlador
+  Reportes exigidos en la clase principal:
+  1) generarReportePorClase() : Map<String,Integer>
+  2) generarReporteNivelMayor(3) : List<Aventurero>
+  Se invocan desde VentanaPrincipal
+  (btnReporteClase / btnReporteNivel).
+end note
+
+note bottom of RegistroGremio
+  Formato: yyyy-MM-dd HH:mm:ss | TIPO | Descripción
+  try-with-resources + PrintWriter(FileWriter(..., append=true))
+end note
+@enduml

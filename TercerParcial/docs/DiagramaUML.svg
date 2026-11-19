@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Diagrama de clases vectorial: abrir en navegador e imprimir a PDF para la entrega. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1050" viewBox="0 0 1400 1050" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="general" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="none" stroke="#333" stroke-width="1.2"/>
+    </marker>
+    <marker id="realiza" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="none" stroke="#666" stroke-width="1.2" stroke-dasharray="2 1"/>
+    </marker>
+    <marker id="dir" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,3 L10,5 L0,7 z" fill="#444"/>
+    </marker>
+    <style>
+      .box { fill:#fffdf5; stroke:#8b6d2f; stroke-width:1.6; rx:6; }
+      .iface { fill:#eef4ff; stroke:#3c6ea8; stroke-width:1.6; rx:6; }
+      .abs { fill:#fff3d6; stroke:#b8860b; stroke-width:2; rx:6; }
+      .ctrl { fill:#eaf7ee; stroke:#2e8b57; stroke-width:1.6; rx:6; }
+      .view { fill:#fdeeee; stroke:#b03a2e; stroke-width:2; rx:6; }
+      .title { font-size:17px; font-weight:bold; fill:#2c1a0f; }
+      .head { font-size:13px; font-weight:bold; fill:#2c1a0f; }
+      .txt { font-size:10.5px; fill:#333; }
+      .rel { font-size:10px; fill:#555; }
+      .line { stroke:#555; stroke-width:1.2; fill:none; }
+    </style>
+  </defs>
+
+  <text x="700" y="34" text-anchor="middle" class="title">Gremio de Aventureros — Diagrama de Clases (MVC)</text>
+
+  <!-- Interfaz -->
+  <rect x="40" y="70" width="250" height="60" class="iface"/>
+  <text x="165" y="92" text-anchor="middle" class="head">«interface» IAccionCombate</text>
+  <text x="165" y="114" text-anchor="middle" class="txt">+ejecutarAccionCombate(): String</text>
+
+  <!-- Superclase abstracta -->
+  <rect x="400" y="60" width="300" height="180" class="abs"/>
+  <text x="550" y="82" text-anchor="middle" class="head">«abstract» Aventurero</text>
+  <line x1="400" y1="90" x2="700" y2="90" stroke="#b8860b"/>
+  <text x="412" y="108" class="txt">-nombre, -nivel, -pvMaximos, -hpActual</text>
+  <text x="412" y="124" class="txt">-estadisticas: int[], -{static} ALEATORIO</text>
+  <text x="412" y="142" class="txt">+Aventurero() / (nombre,nivel) / (nombre,nivel,pv)</text>
+  <text x="412" y="158" class="txt">+{static} tirar4d6DropLowest(), modificador(int)</text>
+  <text x="412" y="174" class="txt">+calcularCA(), getBonoAtaque(), getCompetencia()</text>
+  <text x="412" y="190" class="txt">+subirNivel() / subirNivel(int)  «sobrecarga»</text>
+  <text x="412" y="206" class="txt">+{abstract} getDadoDano(), getStatPrincipal(),</text>
+  <text x="412" y="222" class="txt">  getIcono(), ejecutarAccionCombate(), toString()</text>
+
+  <!-- Monstruo y RegistroGremio -->
+  <rect x="1080" y="60" width="280" height="130" class="box"/>
+  <text x="1220" y="82" text-anchor="middle" class="head">Monstruo</text>
+  <line x1="1080" y1="90" x2="1360" y2="90" stroke="#8b6d2f"/>
+  <text x="1092" y="108" class="txt">-{final} nombre, hpMaximos, ca, dificultad, icono</text>
+  <text x="1092" y="124" class="txt">-hp: int   (mutable, 0..hpMaximos)</text>
+  <text x="1092" y="142" class="txt">+{static} crearGoblin() / crearOgro() / crearDragon()</text>
+  <text x="1092" y="160" class="txt">+setHp(int), estaVivo(), toString()</text>
+
+  <rect x="1080" y="230" width="280" height="125" class="box"/>
+  <text x="1220" y="252" text-anchor="middle" class="head">«final» RegistroGremio</text>
+  <line x1="1080" y1="260" x2="1360" y2="260" stroke="#8b6d2f"/>
+  <text x="1092" y="278" class="txt">-{static final} ARCHIVO = "registro_gremio.txt"</text>
+  <text x="1092" y="294" class="txt">-{static final} FORMATO: DateTimeFormatter</text>
+  <text x="1092" y="312" class="txt">+{static} registrar(String) / registrar(Path,String)</text>
+  <text x="1092" y="328" class="txt">+{static} leer(Path), leerRegistro(), getArchivo()</text>
+
+  <!-- Subclases fila 1 -->
+  <rect x="40" y="310" width="200" height="105" class="box"/>
+  <text x="140" y="332" text-anchor="middle" class="head">Guerrero</text>
+  <text x="52" y="352" class="txt">-armaduraPesada: boolean</text>
+  <text x="52" y="370" class="txt">d6 · FUE · ⚔️ · CA 16 si pesada</text>
+  <text x="52" y="388" class="txt">+setArmaduraPesada(boolean)</text>
+  <text x="52" y="404" class="txt">+ejecutarAccionCombate()  «override»</text>
+
+  <rect x="270" y="310" width="200" height="105" class="box"/>
+  <text x="370" y="332" text-anchor="middle" class="head">Mago</text>
+  <text x="282" y="352" class="txt">-espaciosConjuro: int</text>
+  <text x="282" y="370" class="txt">d4 · INT · 🔮</text>
+  <text x="282" y="388" class="txt">+Mago(nombre,nivel,pv) «sobrecarga»</text>
+  <text x="282" y="404" class="txt">+ejecutarAccionCombate()  «override»</text>
+
+  <rect x="500" y="310" width="200" height="105" class="box"/>
+  <text x="600" y="332" text-anchor="middle" class="head">Clérigo</text>
+  <text x="512" y="352" class="txt">-diosVenerado: String</text>
+  <text x="512" y="370" class="txt">d4 · SAB · ✨</text>
+  <text x="512" y="388" class="txt">+setDiosVenerado(String)</text>
+  <text x="512" y="404" class="txt">+ejecutarAccionCombate()  «override»</text>
+
+  <rect x="730" y="310" width="200" height="105" class="box"/>
+  <text x="830" y="332" text-anchor="middle" class="head">Monje</text>
+  <text x="742" y="352" class="txt">-puntosKi: int</text>
+  <text x="742" y="370" class="txt">d6 · DES · 🥋</text>
+  <text x="742" y="388" class="txt">#bonoCAAdicional(): +mod(SAB)</text>
+  <text x="742" y="404" class="txt">+ejecutarAccionCombate()  «override»</text>
+
+  <!-- Subclases fila 2 -->
+  <rect x="40" y="465" width="200" height="105" class="box"/>
+  <text x="140" y="487" text-anchor="middle" class="head">Paladín</text>
+  <text x="52" y="507" class="txt">-puntosFuerza, -armaduraPesada</text>
+  <text x="52" y="525" class="txt">d6 · FUE · 🛡️ · CA 16 si fuerza ≥ 15</text>
+  <text x="52" y="543" class="txt">#usaArmaduraPesada()  «override»</text>
+  <text x="52" y="559" class="txt">+ejecutarAccionCombate()  «override»</text>
+
+  <rect x="270" y="465" width="200" height="105" class="box"/>
+  <text x="370" y="487" text-anchor="middle" class="head">Explorador</text>
+  <text x="282" y="507" class="txt">-terrenoFavorecido: String</text>
+  <text x="282" y="525" class="txt">d6 · DES · 🏹</text>
+  <text x="282" y="543" class="txt">+setTerrenoFavorecido(String)</text>
+  <text x="282" y="559" class="txt">+ejecutarAccionCombate()  «override»</text>
+
+  <rect x="500" y="465" width="200" height="105" class="box"/>
+  <text x="600" y="487" text-anchor="middle" class="head">Pícaro</text>
+  <text x="512" y="507" class="txt">-herramientasLadron: boolean</text>
+  <text x="512" y="525" class="txt">d6 · DES · 🗡️</text>
+  <text x="512" y="543" class="txt">+setHerramientasLadron(boolean)</text>
+  <text x="512" y="559" class="txt">+ejecutarAccionCombate()  «override»</text>
+
+  <rect x="730" y="465" width="200" height="105" class="box"/>
+  <text x="830" y="487" text-anchor="middle" class="head">Bardo</text>
+  <text x="742" y="507" class="txt">-instrumentoMusical: String</text>
+  <text x="742" y="525" class="txt">d4 · CAR · 🎵</text>
+  <text x="742" y="543" class="txt">+setInstrumentoMusical(String)</text>
+  <text x="742" y="559" class="txt">+ejecutarAccionCombate()  «override»</text>
+
+  <!-- Controladores -->
+  <rect x="150" y="660" width="420" height="150" class="ctrl"/>
+  <text x="360" y="682" text-anchor="middle" class="head">GremioControlador</text>
+  <line x1="150" y1="690" x2="570" y2="690" stroke="#2e8b57"/>
+  <text x="162" y="708" class="txt">-aventureros: List&lt;Aventurero&gt;  «agregación 1..*»</text>
+  <text x="162" y="726" class="txt">+agregarAventurero(), listarAventureros(), eliminar()</text>
+  <text x="162" y="744" class="txt">+subirNivel(a,int), recibirDano(a,int), curar(a)</text>
+  <text x="162" y="762" class="txt">+generarReportePorClase(): Map&lt;String,Integer&gt;</text>
+  <text x="162" y="780" class="txt">+generarReporteNivelMayor(int): List&lt;Aventurero&gt;</text>
+  <text x="162" y="798" class="txt">+crearAventurero(clase,nombre,nivel,pv,atributo)</text>
+
+  <rect x="650" y="660" width="460" height="150" class="ctrl"/>
+  <text x="880" y="682" text-anchor="middle" class="head">CombateControlador</text>
+  <line x1="650" y1="690" x2="1110" y2="690" stroke="#2e8b57"/>
+  <text x="662" y="708" class="txt">-aventureros, -bitacora, -orden, -aleatorio</text>
+  <text x="662" y="726" class="txt">-monstruo  «composición 1», -Tirada  «composición 3»</text>
+  <text x="662" y="744" class="txt">+iniciarCombate(Monstruo), procesarTurno()</text>
+  <text x="662" y="762" class="txt">+aplicarDano(int), cancelar(), roll3d6(): Tirada</text>
+  <text x="662" y="780" class="txt">+isActivo(), isEsperandoDano(), getClaseDano()</text>
+  <text x="662" y="798" class="txt">+getBitacora(), getEstado(), getResultado()</text>
+
+  <!-- Vista -->
+  <rect x="430" y="880" width="460" height="125" class="view"/>
+  <text x="660" y="902" text-anchor="middle" class="head">«JFrame Form» VentanaPrincipal</text>
+  <line x1="430" y1="910" x2="890" y2="910" stroke="#b03a2e"/>
+  <text x="442" y="928" class="txt">-gremioControlador, -combateControlador  «composición»</text>
+  <text x="442" y="946" class="txt">-initComponents(): GroupLayout, 5 pestañas</text>
+  <text x="442" y="964" class="txt">-btnCrearActionPerformed(), -btnD4ActionPerformed()</text>
+  <text x="442" y="982" class="txt">-btnReporteClaseActionPerformed(), -btnReporteNivelActionPerformed()</text>
+  <text x="442" y="1000" class="txt">+{static} main(String[]): abre la GUI</text>
+
+  <!-- Relación de realización e herencia -->
+  <path d="M400,95 L290,95" class="line" marker-end="url(#realiza)"/>
+  <text x="320" y="88" class="rel">realización</text>
+
+  <path d="M140,310 L520,240" class="line" marker-end="url(#general)"/>
+  <path d="M370,310 L540,240" class="line" marker-end="url(#general)"/>
+  <path d="M600,310 L560,240" class="line" marker-end="url(#general)"/>
+  <path d="M830,310 L600,240" class="line" marker-end="url(#general)"/>
+  <path d="M140,465 L500,240" class="line" marker-end="url(#general)"/>
+  <path d="M370,465 L540,240" class="line" marker-end="url(#general)"/>
+  <path d="M600,465 L570,240" class="line" marker-end="url(#general)"/>
+  <path d="M830,465 L620,240" class="line" marker-end="url(#general)"/>
+  <text x="900" y="280" class="rel">herencia (8 subclases)</text>
+
+  <!-- Asociaciones / dependencias / composiciones -->
+  <path d="M360,660 L420,415" class="line" marker-end="url(#dir)"/>
+  <text x="230" y="620" class="rel">agregación: List&lt;Aventurero&gt;</text>
+
+  <path d="M880,660 L800,570" class="line" marker-end="url(#dir)"/>
+  <text x="940" y="620" class="rel">agregación de turnos</text>
+
+  <path d="M1110,700 L1220,190" class="line" marker-end="url(#dir)"/>
+  <text x="1125" y="450" class="rel">composición: Monstruo</text>
+
+  <path d="M570,735 L1080,290" class="line" marker-end="url(#dir)"/>
+  <text x="760" y="520" class="rel">dependencia: persistencia</text>
+
+  <path d="M1110,790 L1080,300" class="line" marker-end="url(#dir)"/>
+  <text x="1135" y="620" class="rel">dependencia: bitácora</text>
+
+  <path d="M560,880 L420,805" class="line" marker-end="url(#dir)"/>
+  <path d="M790,880 L840,805" class="line" marker-end="url(#dir)"/>
+  <text x="430" y="855" class="rel">delegación de eventos (sin lógica de negocio en la vista)</text>
+
+  <text x="40" y="1035" class="rel">Leyenda: ▷ herencia · ┄▷ realización · → asociación/dependencia · líneas punteadas en el UML textual. Fuente: docs/DiagramaUML.txt</text>
+</svg>
